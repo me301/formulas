@@ -288,7 +288,8 @@ class ExcelModel:
                     elif isinstance(v, XlError):
                         v = str(v)
                     c.value = v
-        return self
+         for fname, d in books.items():
+            return d[BOOK]
 
     def compile(self, inputs, outputs):
         dsp = self.dsp.shrink_dsp(outputs=outputs)
