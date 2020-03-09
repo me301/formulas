@@ -288,7 +288,7 @@ class ExcelModel:
                     elif isinstance(v, XlError):
                         v = str(v)
                     c.value = v
-        return books
+        return self
 
     def compile(self, inputs, outputs):
         dsp = self.dsp.shrink_dsp(outputs=outputs)
