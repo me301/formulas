@@ -288,10 +288,6 @@ class ExcelModel:
                     elif isinstance(v, XlError):
                         v = str(v)
                     c.value = v
-        if dirpath:
-            os.makedirs(dirpath, exist_ok=True)
-            for fname, d in books.items():
-                d[BOOK].save(osp.join(dirpath, fname))
         return books
 
     def compile(self, inputs, outputs):
