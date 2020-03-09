@@ -288,7 +288,7 @@ class ExcelModel:
                     elif isinstance(v, XlError):
                         v = str(v)
                     c.value = v
-         for fname, d in books.items():
+        for fname, d in books.items():
             return d[BOOK]
 
     def compile(self, inputs, outputs):
